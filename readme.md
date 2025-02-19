@@ -2,6 +2,8 @@
 
 ## Objective
 
+I have merged all the code into Master.
+
 1. Cloned the Assignment3 Repo to a new Repo
 2. Created a faker branch
 3. Created all new files
