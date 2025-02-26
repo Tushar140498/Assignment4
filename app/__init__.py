@@ -17,15 +17,18 @@ class App:
         self.command_handler.register_command("multiply", MultiplyCommand)
         self.command_handler.register_command("divide", DivideCommand)
         self.command_handler.register_command("exit", ExitCommand)
-        self.command_handler.register_command("menu", MenuCommand())
+        self.command_handler.register_command("menu", MenuCommand)
 
-        print("Available commands: add, subtract, multiply, divide, exit")
+        print("Available commands: add, subtract, multiply, divide, exit, menu")
         print("Type 'command number1 number2' (e.g., 'add 2 2') or 'exit' to quit.")
 
         while True:  # REPL (Read, Evaluate, Print, Loop)
             user_input = input(">>> ").strip().lower()
             if user_input == "exit":
                 self.command_handler.execute_command("exit")
+                break
+            if user_input == "menu":
+                self.command_handler.execute_command("menu")
                 break
 
             # Parse user input into command and arguments
