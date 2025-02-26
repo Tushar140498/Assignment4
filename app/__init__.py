@@ -4,6 +4,7 @@ from app.commands.add import AddCommand
 from app.commands.subtract import SubtractCommand
 from app.commands.multiply import MultiplyCommand
 from app.commands.divide import DivideCommand
+from app.commands.menu import MenuCommand
 
 class App:
     def __init__(self):  # Constructor
@@ -16,6 +17,7 @@ class App:
         self.command_handler.register_command("multiply", MultiplyCommand)
         self.command_handler.register_command("divide", DivideCommand)
         self.command_handler.register_command("exit", ExitCommand)
+        self.command_handler.register_command("menu", MenuCommand())
 
         print("Available commands: add, subtract, multiply, divide, exit")
         print("Type 'command number1 number2' (e.g., 'add 2 2') or 'exit' to quit.")
