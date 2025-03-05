@@ -2,7 +2,7 @@ import os
 import sys
 import pkgutil
 import importlib
-from dotenv import load_dotenv # type: ignore
+from dotenv import load_dotenv
 import logging
 import logging.config
 
